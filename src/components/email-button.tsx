@@ -46,7 +46,7 @@ export function EmailButton({
         className="relative flex w-full cursor-pointer items-center gap-2 rounded-lg p-2 transition-colors"
       >
         <Email className="h-4 w-4" />
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="wait" initial={false}>
           <motion.span
             key={buttonText}
             initial={{ opacity: 0, y: 10 }}
