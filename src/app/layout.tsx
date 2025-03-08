@@ -14,8 +14,13 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+  title: "Fabricio Borgobello - Software Engineer",
+  description:
+    "Software developer specialized in frontend with skills in JavaScript, TypeScript, React and Node. Contact me via email or LinkedIn to learn more.",
+  keywords:
+    "Fabricio Borgobello, frontend developer, JavaScript, TypeScript, React",
+  authors: { name: "Fabricio Borgobello", url: "https://fabri.ar" },
+  robots: "follow, index",
 };
 
 export default function RootLayout({
@@ -40,7 +45,9 @@ export default function RootLayout({
         >
           {children}
           <TailwindWidget position="right" />
-          <ThemeToggle />
+          <div className="absolute top-4 right-4">
+            <ThemeToggle />
+          </div>
         </ThemeProvider>
       </body>
     </html>
