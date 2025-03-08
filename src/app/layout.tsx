@@ -44,7 +44,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
-          <TailwindWidget position="right" />
+          {process.env.NEXT_PUBLIC_ENVIRONMENT !== "production" && (
+            <TailwindWidget position="right" />
+          )}
           <div className="absolute top-4 right-4">
             <ThemeToggle />
           </div>
