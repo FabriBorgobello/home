@@ -1,3 +1,5 @@
+import { ScrollIndicator } from "@/components/scroll-indicator";
+
 export default async function Page({
   params,
 }: {
@@ -9,6 +11,7 @@ export default async function Page({
   return (
     <div className="flex justify-center scroll-smooth px-6 py-8 sm:px-10 md:px-16 md:py-12 lg:px-24 lg:py-16">
       <article className="w-full max-w-prose">
+        <ScrollIndicator />
         <Post />
       </article>
     </div>
