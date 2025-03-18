@@ -80,7 +80,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
     a: (props) => (
       <a
-        className="text-primary hover:text-primary-foreground underline"
+        className="text-primary hover:text-primary/60 underline transition-opacity"
         {...props}
       />
     ),
@@ -121,6 +121,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       />
     ),
     hr: (props) => <hr className="border-border my-8 border-t" {...props} />,
+
     ...components,
   };
 }

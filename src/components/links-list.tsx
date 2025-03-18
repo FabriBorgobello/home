@@ -40,8 +40,6 @@ export function LinksList() {
               id="hoverBackground"
               layoutId="hoverBackground"
               className="bg-foreground/10 absolute inset-0 rounded-lg"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
               transition={{ type: "spring", stiffness: 500, damping: 30 }}
             />
           )}

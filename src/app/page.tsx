@@ -2,10 +2,10 @@ import { LinksList } from "@/components/links-list";
 
 export default function Home() {
   return (
-    <div className="mx-auto w-[500px] max-w-full p-4 py-8 sm:py-16">
+    <div className="mx-auto w-[500px] max-w-full p-4 py-16">
       <div className="mb-8 flex flex-col">
         <h1 className="text-lg font-bold">Fabricio Borgobello</h1>
-        <p className="text-md text-foreground/80">Software Engineer</p>
+        <p className="text-foreground/80 text-sm">Software Engineer</p>
       </div>
       <p>
         UI specialist. I love creating pleasant interactions for users that look
