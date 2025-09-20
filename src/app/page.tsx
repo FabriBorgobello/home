@@ -2,7 +2,7 @@ import { LinksList } from "@/components/links-list";
 
 export default function Home() {
   return (
-    <div className="mx-auto w-[500px] max-w-full p-4 py-16">
+    <div className="mx-auto flex h-full w-[500px] max-w-full flex-col justify-center p-4 py-16">
       <div className="mb-8 flex flex-col">
         <h1 className="text-lg font-bold">Fabricio Borgobello</h1>
         <p className="text-foreground/80 text-sm">Software Engineer</p>

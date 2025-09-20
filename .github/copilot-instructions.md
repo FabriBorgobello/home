@@ -1,0 +1,2 @@
+- `AnimatePresence` and `motion` (originally from `framer-motion`) should not be imported from this package, but from: "motion/react" e.g.: `import { AnimatePresence, motion } from "motion/react";`
+- Format the code after modifying a file.

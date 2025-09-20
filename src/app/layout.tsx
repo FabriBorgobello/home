@@ -34,7 +34,7 @@ export default function RootLayout({
       <body
         className={cn(
           montserrat.variable,
-          "text-foreground flex min-h-screen flex-col font-sans antialiased",
+          "text-foreground flex h-screen min-h-screen flex-col font-sans antialiased",
         )}
       >
         <ThemeProvider
