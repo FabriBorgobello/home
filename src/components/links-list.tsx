@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
-import { motion } from "motion/react";
+import { motion, Variants } from "motion/react";
 import { FaGithub as Github, FaLinkedin as LinkedIn } from "react-icons/fa6";
 import { IoIosDocument as Document } from "react-icons/io";
 
@@ -23,14 +23,43 @@ const links = [
   },
 ];
 
+const listVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.03,
+      delayChildren: 0.05,
+    },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, x: -10 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.35,
+      ease: [0.25, 0.46, 0.45, 0.94],
+    },
+  },
+};
+
 export function LinksList() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <ul className="relative flex flex-col pl-2">
+    <motion.ul
+      variants={listVariants}
+      initial="hidden"
+      animate="visible"
+      className="relative flex flex-col pl-2"
+    >
       {links.map((link, index) => (
         <motion.li
           key={link.href}
+          variants={itemVariants}
           className="relative"
           onMouseEnter={() => setHoveredIndex(index)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -55,11 +84,13 @@ export function LinksList() {
         </motion.li>
       ))}
       {/* Button Item */}
-      <EmailButton
-        hoverIndex={hoveredIndex}
-        setHoverIndex={setHoveredIndex}
-        index={links.length}
-      />
-    </ul>
+      <motion.div variants={itemVariants}>
+        <EmailButton
+          hoverIndex={hoveredIndex}
+          setHoverIndex={setHoveredIndex}
+          index={links.length}
+        />
+      </motion.div>
+    </motion.ul>
   );
 }
